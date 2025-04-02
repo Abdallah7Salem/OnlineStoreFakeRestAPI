@@ -17,7 +17,9 @@ public class Payload {
 		Double price = Double.parseDouble(faker.commerce().price());
 		String description = faker.lorem().sentence();
 		String imageUrl = "https://i.pravatar.cc/100";
-		String category = categories[random.nextInt(5)];
+		
+		// Utilizing random class object to select random category
+		String category = categories[random.nextInt(categories.length)];
 	
 	}
 	
