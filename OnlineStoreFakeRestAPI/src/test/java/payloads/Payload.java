@@ -9,7 +9,7 @@ public class Payload {
 	private static final Faker faker = new Faker();
 	private static final String categories[] = {"electronics", "furniture", "clothing", "books", "beauty"};
 	
-	Random random = new Random();
+	private static final Random random = new Random();
 	
 	// Product Payload
 	Product productPayload() {
@@ -21,6 +21,7 @@ public class Payload {
 		// Utilizing random class object to select random category
 		String category = categories[random.nextInt(categories.length)];
 	
+		return new Product(name, price, description, imageUrl, category);
 	}
 	
 	// Cart Payload
