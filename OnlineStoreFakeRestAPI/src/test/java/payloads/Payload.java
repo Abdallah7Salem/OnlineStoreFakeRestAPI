@@ -12,7 +12,7 @@ public class Payload {
 	private static final Random random = new Random();
 	
 	// Product Payload
-	Product productPayload() {
+	public static Product productPayload() {
 		String name = faker.commerce().productName();
 		Double price = Double.parseDouble(faker.commerce().price());
 		String description = faker.lorem().sentence();
