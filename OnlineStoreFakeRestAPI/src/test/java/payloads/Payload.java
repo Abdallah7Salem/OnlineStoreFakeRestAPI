@@ -6,8 +6,10 @@ import pojo.Product;
 public class Payload {
 
 	private static final Faker faker = new Faker();
+	private static final String categories[] = {"electronics", "furniture", "clothing", "books", "beauty"};
 	
 	// Product Payload
+	Product productPayload()
 
 	
 	// Cart Payload
