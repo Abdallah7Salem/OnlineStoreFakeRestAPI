@@ -17,7 +17,7 @@ import java.util.List;
 public class ProductTests extends BaseClass {
 
 	// 1) Test to retrieve all products
-	//@Test
+	@Test
 	public void testGetAllProducts()
 	{
 		given()
@@ -30,7 +30,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 2) Test to retrieve a single product by ID
-	//@Test
+	@Test
 	public void testGetSingleProductById()
 	{
 		int productId = configReader.getIntProperty("productId");
@@ -44,7 +44,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 3) Test to retrieve a limited number of products
-	//@Test
+	@Test
 	public void testGetLimitedProducts()
 	{
 		given()
@@ -57,7 +57,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 4) Test to retrieve products sorted in descending order
-	//@Test
+	@Test
 	public void testGetSortedProducts()
 	{
 		
@@ -74,7 +74,7 @@ public class ProductTests extends BaseClass {
 	}
 
 	// 5) Test to retrieve products sorted in ascending order
-	//@Test
+	@Test
 	public void testGetSortedProductsAsc()
 	{
 		
@@ -91,7 +91,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 6) Test to get all product categories
-	//@Test
+	@Test
 	public void testGetAllCategories()
 	{
 		given()
@@ -104,7 +104,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 7) Test to get products by category
-	//@Test
+	@Test
 	public void testGetProductsByCategory()
 	{
 		given()
@@ -120,7 +120,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 8) Add new product
-	//@Test
+	@Test
 	public void testAddNewProduct()
 	{
 		Product newProduct = Payload.productPayload();
@@ -140,7 +140,7 @@ public class ProductTests extends BaseClass {
 	}
 
 	// 9) Test to update an existing product
-	//@Test
+	@Test
 	public void testUpdateProduct()
 	{
 		int productId = configReader.getIntProperty("productId");
