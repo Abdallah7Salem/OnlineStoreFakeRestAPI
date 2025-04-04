@@ -251,6 +251,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;API TestSuite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utils.ExtentReporter&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;2&quot; name=&quot;API Tests&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testcases.ProductTests&quot;/&gt;
@@ -297,43 +300,43 @@ data.addRows(10);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testAddNewProduct')
 data.setCell(0, 2, 'testcases.ProductTests')
-data.setCell(0, 3, 3123);
+data.setCell(0, 3, 2922);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testGetProductsByCategory')
+data.setCell(1, 1, 'testGetAllCategories')
 data.setCell(1, 2, 'testcases.ProductTests')
-data.setCell(1, 3, 370);
+data.setCell(1, 3, 574);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testDeleteProduct')
+data.setCell(2, 1, 'testGetProductsByCategory')
 data.setCell(2, 2, 'testcases.ProductTests')
-data.setCell(2, 3, 368);
+data.setCell(2, 3, 475);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testGetAllCategories')
+data.setCell(3, 1, 'testDeleteProduct')
 data.setCell(3, 2, 'testcases.ProductTests')
-data.setCell(3, 3, 258);
+data.setCell(3, 3, 365);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testGetAllProducts')
+data.setCell(4, 1, 'testGetLimitedProducts')
 data.setCell(4, 2, 'testcases.ProductTests')
-data.setCell(4, 3, 256);
+data.setCell(4, 3, 303);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testGetSortedProducts')
+data.setCell(5, 1, 'testGetAllProducts')
 data.setCell(5, 2, 'testcases.ProductTests')
-data.setCell(5, 3, 241);
+data.setCell(5, 3, 294);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testGetSortedProductsAsc')
+data.setCell(6, 1, 'testGetSortedProducts')
 data.setCell(6, 2, 'testcases.ProductTests')
-data.setCell(6, 3, 241);
+data.setCell(6, 3, 265);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testGetLimitedProducts')
+data.setCell(7, 1, 'testGetSortedProductsAsc')
 data.setCell(7, 2, 'testcases.ProductTests')
-data.setCell(7, 3, 234);
+data.setCell(7, 3, 251);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testUpdateProduct')
+data.setCell(8, 1, 'testGetSingleProductById')
 data.setCell(8, 2, 'testcases.ProductTests')
-data.setCell(8, 3, 227);
+data.setCell(8, 3, 226);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testGetSingleProductById')
+data.setCell(9, 1, 'testUpdateProduct')
 data.setCell(9, 2, 'testcases.ProductTests')
-data.setCell(9, 3, 218);
+data.setCell(9, 3, 225);
 window.suiteTableData['API_TestSuite']= { tableData: data, tableDiv: 'times-div-API_TestSuite'}
 return data;
 }
@@ -371,43 +374,43 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testAddNewProduct</span>
-                <span class="method-start">497 ms</span>
+                <span class="method-start">478 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testDeleteProduct</span>
-                <span class="method-start">3693 ms</span>
+                <span class="method-start">3482 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testGetAllCategories</span>
-                <span class="method-start">4219 ms</span>
+                <span class="method-start">3850 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testGetAllProducts</span>
-                <span class="method-start">4480 ms</span>
+                <span class="method-start">4428 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testGetLimitedProducts</span>
-                <span class="method-start">4738 ms</span>
+                <span class="method-start">4726 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testGetProductsByCategory</span>
-                <span class="method-start">4975 ms</span>
+                <span class="method-start">5032 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testGetSingleProductById</span>
-                <span class="method-start">5348 ms</span>
+                <span class="method-start">5513 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testGetSortedProducts</span>
-                <span class="method-start">5570 ms</span>
+                <span class="method-start">5742 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testGetSortedProductsAsc</span>
-                <span class="method-start">5814 ms</span>
+                <span class="method-start">6011 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUpdateProduct</span>
-                <span class="method-start">6058 ms</span>
+                <span class="method-start">6266 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
