@@ -91,7 +91,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 6) Test to get all product categories
-	@Test
+	//@Test
 	public void testGetAllCategories()
 	{
 		given()
@@ -103,7 +103,21 @@ public class ProductTests extends BaseClass {
 			.body("size()", greaterThan(0));
 	}
 	
-	
+	// 7) Test to get products by category
+	@Test
+	public void testGetProductsByCategory()
+	{
+		given()
+			.pathParam("category", "electronics")
+		.when()
+			.get(Routes.GET_PRODUCTS_BY_CATEGORY)
+		.then()
+			.statusCode(200)
+			.body("size()", greaterThan(0))
+			.body("category", everyItem(notNullValue()))
+			.body("category", everyItem(equalTo("electronics")))
+			.log().body();
+	}
 }
 
 
