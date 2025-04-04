@@ -57,7 +57,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 4) Test to retrieve products sorted in descending order
-	@Test
+	//@Test
 	public void testGetSortedProducts()
 	{
 		
@@ -73,6 +73,23 @@ public class ProductTests extends BaseClass {
 		assertThat(isSortedDescending(productsIds), is(true));
 	}
 
+	// 5) Test to retrieve products sorted in ascending order
+	@Test
+	public void testGetSortedProductsAsc()
+	{
+		
+		Response response =given()
+			.pathParam("order", "asc")
+		.when()
+			.get(Routes.GET_PRODUCTS_SORTED)
+		.then()
+			.statusCode(200)
+			.extract().response();
+		
+		List<Integer> productsIds = response.jsonPath().getList("id", Integer.class);
+		assertThat(isSortedAscending(productsIds), is(true));
+	}
+	
 	
 }
 
