@@ -158,7 +158,7 @@ public class ProductTests extends BaseClass {
 			.statusCode(200)
 			.body("title", equalTo(updatedPayload.getTitle()));
 	}
-	
+	 
 }
 
 

@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-04T14:52:59 EET" name="Default suite" finished-at="2025-04-04T14:53:02 EET" duration-ms="3511">
+  <suite started-at="2025-04-04T15:10:59 EET" name="Default suite" finished-at="2025-04-04T15:11:03 EET" duration-ms="4370">
     <groups>
     </groups>
-    <test started-at="2025-04-04T14:52:59 EET" name="Default test" finished-at="2025-04-04T14:53:02 EET" duration-ms="3511">
+    <test started-at="2025-04-04T15:10:59 EET" name="Default test" finished-at="2025-04-04T15:11:03 EET" duration-ms="4370">
       <class name="testcases.ProductTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ProductTests@68746f22]" started-at="2025-04-04T14:52:59 EET" name="setup" finished-at="2025-04-04T14:52:59 EET" duration-ms="451" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ProductTests@2f01783a]" started-at="2025-04-04T15:10:59 EET" name="setup" finished-at="2025-04-04T15:11:00 EET" duration-ms="462" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testAddNewProduct()[pri:0, instance:testcases.ProductTests@68746f22]" started-at="2025-04-04T14:52:59 EET" name="testAddNewProduct" finished-at="2025-04-04T14:53:02 EET" duration-ms="2940" status="PASS">
+        <test-method signature="testUpdateProduct()[pri:0, instance:testcases.ProductTests@2f01783a]" started-at="2025-04-04T15:11:00 EET" name="testUpdateProduct" finished-at="2025-04-04T15:11:03 EET" duration-ms="3714" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAddNewProduct -->
+        </test-method> <!-- testUpdateProduct -->
       </class> <!-- testcases.ProductTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
