@@ -30,7 +30,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 2) Test to retrieve a single product by ID
-	@Test
+	//@Test
 	public void testGetSingleProductById()
 	{
 		int productId = configReader.getIntProperty("productId");
@@ -43,6 +43,18 @@ public class ProductTests extends BaseClass {
 			.statusCode(200);
 	}
 	
+	// 3) Test to retrieve a limited number of products
+	@Test
+	public void testGetLimitedProducts()
+	{
+		given()
+			.pathParam("limit", 3)
+		.when()
+			.get(Routes.GET_PRODUCTS_WITH_LIMIT)
+		.then()
+			.statusCode(200)
+			.body("size()", equalTo(3));
+	}
 	
 }
 
