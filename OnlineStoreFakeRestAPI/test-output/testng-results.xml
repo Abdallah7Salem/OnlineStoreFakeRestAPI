@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-04T13:54:31 EET" name="Default suite" finished-at="2025-04-04T13:54:34 EET" duration-ms="3183">
+  <suite started-at="2025-04-04T14:23:00 EET" name="Default suite" finished-at="2025-04-04T14:23:05 EET" duration-ms="4607">
     <groups>
     </groups>
-    <test started-at="2025-04-04T13:54:31 EET" name="Default test" finished-at="2025-04-04T13:54:34 EET" duration-ms="3183">
+    <test started-at="2025-04-04T14:23:00 EET" name="Default test" finished-at="2025-04-04T14:23:05 EET" duration-ms="4607">
       <class name="testcases.ProductTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ProductTests@4a07d605]" started-at="2025-04-04T13:54:31 EET" name="setup" finished-at="2025-04-04T13:54:31 EET" duration-ms="474" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ProductTests@74287ea3]" started-at="2025-04-04T14:23:00 EET" name="setup" finished-at="2025-04-04T14:23:01 EET" duration-ms="540" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testGetLimitedProducts()[pri:0, instance:testcases.ProductTests@4a07d605]" started-at="2025-04-04T13:54:31 EET" name="testGetLimitedProducts" finished-at="2025-04-04T13:54:34 EET" duration-ms="2590" status="PASS">
+        <test-method signature="testGetSortedProducts()[pri:0, instance:testcases.ProductTests@74287ea3]" started-at="2025-04-04T14:23:01 EET" name="testGetSortedProducts" finished-at="2025-04-04T14:23:05 EET" duration-ms="3933" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetLimitedProducts -->
+        </test-method> <!-- testGetSortedProducts -->
       </class> <!-- testcases.ProductTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
