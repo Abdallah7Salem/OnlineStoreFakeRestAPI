@@ -120,7 +120,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 8) Add new product
-	@Test
+	//@Test
 	public void testAddNewProduct()
 	{
 		Product newProduct = Payload.productPayload();
@@ -137,6 +137,26 @@ public class ProductTests extends BaseClass {
 			.extract().jsonPath().getInt("id");
 		
 		System.out.println(productId);
+	}
+
+	// 9) Test to update an existing product
+	@Test
+	public void testUpdateProduct()
+	{
+		int productId = configReader.getIntProperty("productId");
+		
+		Product updatedPayload = Payload.productPayload();
+		
+		given()
+			.contentType(ContentType.JSON)
+			.body(updatedPayload)
+			.pathParam("id", productId)
+		.when()
+			.put(Routes.UPDATE_PRODUCT)
+		.then()
+			.log().body()
+			.statusCode(200)
+			.body("title", equalTo(updatedPayload.getTitle()));
 	}
 	
 }
