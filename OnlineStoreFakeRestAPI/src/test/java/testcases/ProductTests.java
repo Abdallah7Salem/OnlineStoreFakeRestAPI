@@ -16,7 +16,35 @@ import java.util.List;
 
 public class ProductTests extends BaseClass {
 
+	// 1) Test to retrieve all products
+	@Test
+	public void testGetAllProducts()
+	{
+		given()
+		
+		.when()
+			.get(Routes.GET_ALL_PRODUCTS)
+		.then()
+			.statusCode(200)
+			.body("size()", greaterThan(0));  
+	}
+	
 	
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
