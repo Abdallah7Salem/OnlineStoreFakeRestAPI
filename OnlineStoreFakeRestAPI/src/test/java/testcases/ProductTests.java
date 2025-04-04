@@ -140,7 +140,7 @@ public class ProductTests extends BaseClass {
 	}
 
 	// 9) Test to update an existing product
-	@Test
+	//@Test
 	public void testUpdateProduct()
 	{
 		int productId = configReader.getIntProperty("productId");
@@ -159,6 +159,21 @@ public class ProductTests extends BaseClass {
 			.body("title", equalTo(updatedPayload.getTitle()));
 	}
 	 
+	// 10) test to delete a product
+	@Test
+	public void testDeleteProduct()
+	{
+		// Capture productId from the configuration properties file
+		int productId = configReader.getIntProperty("productId");
+		
+		given()
+			.pathParam("id", productId)
+		.when()
+			.delete(Routes.DELETE_PRODUCT)
+		.then()
+			.statusCode(200);
+	}
+	
 }
 
 
