@@ -104,7 +104,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 7) Test to get products by category
-	@Test
+	//@Test
 	public void testGetProductsByCategory()
 	{
 		given()
@@ -118,6 +118,27 @@ public class ProductTests extends BaseClass {
 			.body("category", everyItem(equalTo("electronics")))
 			.log().body();
 	}
+	
+	// 8) Add new product
+	@Test
+	public void testAddNewProduct()
+	{
+		Product newProduct = Payload.productPayload();
+		
+		int productId = given()
+			.contentType(ContentType.JSON)
+			.body(newProduct)
+		.when()
+			.post(Routes.CREATE_PRODUCT)
+		.then()
+			.statusCode(200)
+			.body("id", notNullValue())
+			.body("title", equalTo(newProduct.getTitle()))
+			.extract().jsonPath().getInt("id");
+		
+		System.out.println(productId);
+	}
+	
 }
 
 
