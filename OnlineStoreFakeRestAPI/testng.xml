@@ -5,7 +5,7 @@
 <suite name="API TestSuite">
   
   <listeners>
-  	<listener class-name = "util.ExtentReporter"/>
+  	<listener class-name = "utils.ExtentReporter"/>
   </listeners>
   
   
