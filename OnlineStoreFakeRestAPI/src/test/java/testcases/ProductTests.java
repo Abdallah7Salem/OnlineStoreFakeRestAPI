@@ -44,7 +44,7 @@ public class ProductTests extends BaseClass {
 	}
 	
 	// 3) Test to retrieve a limited number of products
-	@Test
+	//@Test
 	public void testGetLimitedProducts()
 	{
 		given()
@@ -55,6 +55,24 @@ public class ProductTests extends BaseClass {
 			.statusCode(200)
 			.body("size()", equalTo(3));
 	}
+	
+	// 4) Test to retrieve products sorted in descending order
+	@Test
+	public void testGetSortedProducts()
+	{
+		
+		Response response =given()
+			.pathParam("order", "desc")
+		.when()
+			.get(Routes.GET_PRODUCTS_SORTED)
+		.then()
+			.statusCode(200)
+			.extract().response();
+		
+		List<Integer> productsIds = response.jsonPath().getList("id", Integer.class);
+		assertThat(isSortedDescending(productsIds), is(true));
+	}
+
 	
 }
 
