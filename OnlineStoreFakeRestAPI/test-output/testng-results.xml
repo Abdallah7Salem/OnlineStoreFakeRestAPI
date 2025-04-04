@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-04T15:10:59 EET" name="Default suite" finished-at="2025-04-04T15:11:03 EET" duration-ms="4370">
+  <suite started-at="2025-04-04T15:15:39 EET" name="Default suite" finished-at="2025-04-04T15:15:41 EET" duration-ms="2466">
     <groups>
     </groups>
-    <test started-at="2025-04-04T15:10:59 EET" name="Default test" finished-at="2025-04-04T15:11:03 EET" duration-ms="4370">
+    <test started-at="2025-04-04T15:15:39 EET" name="Default test" finished-at="2025-04-04T15:15:41 EET" duration-ms="2466">
       <class name="testcases.ProductTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ProductTests@2f01783a]" started-at="2025-04-04T15:10:59 EET" name="setup" finished-at="2025-04-04T15:11:00 EET" duration-ms="462" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ProductTests@68878f6d]" started-at="2025-04-04T15:15:39 EET" name="setup" finished-at="2025-04-04T15:15:39 EET" duration-ms="494" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testUpdateProduct()[pri:0, instance:testcases.ProductTests@2f01783a]" started-at="2025-04-04T15:11:00 EET" name="testUpdateProduct" finished-at="2025-04-04T15:11:03 EET" duration-ms="3714" status="PASS">
+        <test-method signature="testDeleteProduct()[pri:0, instance:testcases.ProductTests@68878f6d]" started-at="2025-04-04T15:15:40 EET" name="testDeleteProduct" finished-at="2025-04-04T15:15:41 EET" duration-ms="1853" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUpdateProduct -->
+        </test-method> <!-- testDeleteProduct -->
       </class> <!-- testcases.ProductTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
