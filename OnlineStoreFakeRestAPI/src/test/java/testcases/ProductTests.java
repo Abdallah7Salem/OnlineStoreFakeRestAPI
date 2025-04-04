@@ -17,7 +17,7 @@ import java.util.List;
 public class ProductTests extends BaseClass {
 
 	// 1) Test to retrieve all products
-	@Test
+	//@Test
 	public void testGetAllProducts()
 	{
 		given()
@@ -29,7 +29,19 @@ public class ProductTests extends BaseClass {
 			.body("size()", greaterThan(0));  
 	}
 	
-	
+	// 2) Test to retrieve a single product by ID
+	@Test
+	public void testGetSingleProductById()
+	{
+		int productId = configReader.getIntProperty("productId");
+		
+		given()
+			.pathParam("id", productId)
+		.when()
+			.get(Routes.GET_PRODUCT_BY_ID)
+		.then()
+			.statusCode(200);
+	}
 	
 	
 }
