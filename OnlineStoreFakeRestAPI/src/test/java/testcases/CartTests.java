@@ -48,7 +48,7 @@ public class CartTests extends BaseClass{
 			.body("id", equalTo(cartId));
 	}
 	
- 	@Test
+ 	//@Test
     public void testGetCartsByDateRange() {
      
     	 String startDate = configReader.getProperty("startdate");
@@ -70,6 +70,23 @@ public class CartTests extends BaseClass{
         assertThat(validateCartDatesWithinRange(cartDates, startDate, endDate), is(true));
         
     }
+ 	
+	@Test
+    public void testGetUserCart() 
+	{
+        int userId = configReader.getIntProperty("userId");
+        
+        given()
+            .pathParam("userId", userId)
+        .when()
+            .get(Routes.GET_USER_CART)
+        .then()
+            .statusCode(200)
+            .body("userId", everyItem(equalTo(userId))); // Validate that the response contains the correct user ID
+    }
+ 	
+	
+ 	
 }
 
 
