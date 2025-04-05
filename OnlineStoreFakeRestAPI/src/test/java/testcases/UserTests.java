@@ -21,7 +21,7 @@ import routes.Routes;
 public class UserTests extends BaseClass {
 
 	// 1) Fetch all the users
-	//@Test
+	@Test
 	public void testGetAllUsers()
 	{
 		given()
@@ -36,7 +36,7 @@ public class UserTests extends BaseClass {
 	}
 	
 	// 2) Test to fetch a specific user by ID
-	//@Test
+	@Test
 	public void testGetUserById()
 	{
 		int userId = configReader.getIntProperty("userId");
@@ -51,7 +51,7 @@ public class UserTests extends BaseClass {
 	}
 	
 	// 3) Test to fetch a limited number of users
-	//@Test
+	@Test
 	public void testGetUsersWithLimit()
 	{
 		int limit = configReader.getIntProperty("limit");
@@ -67,7 +67,7 @@ public class UserTests extends BaseClass {
 	}
 	
 	// 4) Test to fetch users sorted in descending order
-	//@Test
+	@Test
 	void testGetUsersSorted()
 	{
 		Response response = given()
@@ -85,7 +85,7 @@ public class UserTests extends BaseClass {
 	}
 	
 	// 5) Test to fetch users sorted in descending order
-	//@Test
+	@Test
 	void testGetUsersSortedAsc()
 	{
 		Response response = given()
@@ -103,7 +103,7 @@ public class UserTests extends BaseClass {
 	}
 	
 	// 6) Test to create a new user
-	//@Test
+	@Test
 	public void testCreateUser()
 	{
 		User newUser = Payload.userPayload();
@@ -123,7 +123,7 @@ public class UserTests extends BaseClass {
 	}
 	
 	// 7) Test to update a user
-	//@Test
+	@Test
 	public void testUpdateUser()
 	{
 		int userId = configReader.getIntProperty("userId");
