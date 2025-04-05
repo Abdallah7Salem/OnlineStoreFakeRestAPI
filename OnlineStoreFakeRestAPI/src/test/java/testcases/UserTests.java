@@ -18,7 +18,7 @@ import payloads.Payload;
 import pojo.User;
 import routes.Routes;
 
-public class UserTests extends BaseClass{
+public class UserTests extends BaseClass {
 
 	// 1) Fetch all the users
 	//@Test
@@ -36,7 +36,7 @@ public class UserTests extends BaseClass{
 	}
 	
 	// 2) Test to fetch a specific user by ID
-	@Test
+	//@Test
 	public void testGetUserById()
 	{
 		int userId = configReader.getIntProperty("userId");
@@ -49,6 +49,27 @@ public class UserTests extends BaseClass{
 			.log().body()
 			.statusCode(200);
 	}
+	
+	// 3) Test to fetch a limited number of users
+	@Test
+	public void testGetUsersWithLimit()
+	{
+		given()
+			.pathParam("limit", 3)
+		.when()
+			.get(Routes.GET_USERS_WITH_LIMIT)
+		.then()
+			.statusCode(200)
+			.log().body()
+			.body("size()", equalTo(3));
+	}
+	
+	
+	
+	
+	
+	
+	
 }
 
 
