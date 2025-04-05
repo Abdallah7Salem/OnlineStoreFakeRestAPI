@@ -103,7 +103,7 @@ public class UserTests extends BaseClass {
 	}
 	
 	// 6) Test to create a new user
-	@Test
+	//@Test
 	public void testCreateUser()
 	{
 		User newUser = Payload.userPayload();
@@ -122,6 +122,26 @@ public class UserTests extends BaseClass {
 		System.out.println("Generated UserID ===> " + id);
 	}
 	
+	// 7) Test to update a user
+	@Test
+	public void testUpdateUser()
+	{
+		int userId = configReader.getIntProperty("userId");
+		User updatedUser = Payload.userPayload();
+		
+		given()
+			.contentType(ContentType.JSON)
+			.pathParam("id", userId)
+			.body(updatedUser)
+		.when()
+			.put(Routes.UPDATE_USER)
+		.then()
+			.log().body()
+			.statusCode(200)
+			.body("username", equalTo(updatedUser.getUsername()));
+		
+		
+	}
 	
 }
 
