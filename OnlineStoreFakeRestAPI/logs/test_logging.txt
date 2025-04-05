@@ -1,49 +1,66 @@
-Request method:	POST
-Request URI:	https://fakestoreapi.com/users
+Request method:	PUT
+Request URI:	https://fakestoreapi.com/users/1
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	<none>
+Path params:	id=1
 Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "email": "margit.gutmann@hotmail.com",
-    "username": "violeta.schumm",
-    "password": "796b9uici6m0s",
+    "email": "zada.crist@gmail.com",
+    "username": "raisa.haley",
+    "password": "8c7yxpeq72vw",
     "name": {
-        "firstname": "Sasha",
-        "lastname": "Anderson"
+        "firstname": "Jody",
+        "lastname": "Jacobs"
     },
     "address": {
-        "city": "Berryport",
-        "street": "Isabelle Hollow",
-        "number": 89,
-        "zipcode": "25976-1612",
+        "city": "East Freddie",
+        "street": "Cronin Manor",
+        "number": 84,
+        "zipcode": "19762",
         "geolocation": {
-            "lat": "-75.659583",
-            "lng": "170.12888"
+            "lat": "22.931866",
+            "lng": "-69.180820"
         }
     },
-    "phone": "(394) 641-5707"
+    "phone": "740-346-9131"
 }
 HTTP/1.1 200 OK
-Date: Sat, 05 Apr 2025 14:45:59 GMT
+Date: Sat, 05 Apr 2025 14:54:00 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
 Access-Control-Allow-Origin: *
-Etag: W/"9-hVv0cNJophUD7CGn+ZqXp8tVGo0"
+Etag: W/"127-+DIaDSYna05HPNdmpNHFsBkNSQ0"
 X-Powered-By: Express
 Cf-Cache-Status: DYNAMIC
 Content-Encoding: gzip
 Server: cloudflare
-CF-RAY: 92b9d513f904e208-MRS
+CF-RAY: 92b9e0d4a90094d1-MRS
 alt-svc: h3=":443"; ma=86400
 
 {
-    "id": 11
+    "email": "zada.crist@gmail.com",
+    "username": "raisa.haley",
+    "password": "8c7yxpeq72vw",
+    "name": {
+        "firstname": "Jody",
+        "lastname": "Jacobs"
+    },
+    "address": {
+        "city": "East Freddie",
+        "street": "Cronin Manor",
+        "number": 84,
+        "zipcode": "19762",
+        "geolocation": {
+            "lat": "22.931866",
+            "lng": "-69.180820"
+        }
+    },
+    "phone": "740-346-9131"
 }
