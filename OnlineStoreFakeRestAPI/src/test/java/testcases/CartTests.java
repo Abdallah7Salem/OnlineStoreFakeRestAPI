@@ -22,7 +22,17 @@ import routes.Routes;
 
 public class CartTests extends BaseClass{
 
-	
+	@Test
+	public void testGetAllCarts() 
+	{
+		given()
+		
+		.when()
+			.get(Routes.GET_ALL_CARTS)
+		.then()
+			.statusCode(200)
+			.body("size()", greaterThan(0));
+	}
 	
 }
 
