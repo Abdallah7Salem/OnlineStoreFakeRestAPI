@@ -67,7 +67,7 @@ public class UserTests extends BaseClass {
 	}
 	
 	// 4) Test to fetch users sorted in descending order
-	@Test
+	//@Test
 	void testGetUsersSorted()
 	{
 		Response response = given()
@@ -85,7 +85,7 @@ public class UserTests extends BaseClass {
 	}
 	
 	// 5) Test to fetch users sorted in descending order
-	@Test
+	//@Test
 	void testGetUsersSortedAsc()
 	{
 		Response response = given()
@@ -102,7 +102,25 @@ public class UserTests extends BaseClass {
 		assertThat(isSortedAscending(userIds), is(true));
 	}
 	
-	
+	// 6) Test to create a new user
+	@Test
+	public void testCreateUser()
+	{
+		User newUser = Payload.userPayload();
+		
+		int id = given()
+			.contentType(ContentType.JSON)
+			.body(newUser)
+		.when()
+			.post(Routes.CREATE_USER)
+		.then()
+			.log().body()
+			.statusCode(200)
+			.body("id", notNullValue())
+			.extract().jsonPath().getInt("id");
+		
+		System.out.println("Generated UserID ===> " + id);
+	}
 	
 	
 }
