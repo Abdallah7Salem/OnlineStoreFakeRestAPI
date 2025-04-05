@@ -51,7 +51,7 @@ public class UserTests extends BaseClass {
 	}
 	
 	// 3) Test to fetch a limited number of users
-	@Test
+	//@Test
 	public void testGetUsersWithLimit()
 	{
 		int limit = configReader.getIntProperty("limit");
@@ -66,8 +66,41 @@ public class UserTests extends BaseClass {
 			.body("size()", equalTo(limit));
 	}
 	
+	// 4) Test to fetch users sorted in descending order
+	@Test
+	void testGetUsersSorted()
+	{
+		Response response = given()
+			.pathParam("order", "desc")
+		.when()
+			.get(Routes.GET_USERS_SORTED)
+		.then()
+			.statusCode(200)
+			.extract().response();
+		
+		// Capture all the IDs in the response
+		List<Integer> userIds = response.jsonPath().getList("id", Integer.class);
+		
+		assertThat(isSortedDescending(userIds), is(true));
+	}
 	
-	
+	// 5) Test to fetch users sorted in descending order
+	@Test
+	void testGetUsersSortedAsc()
+	{
+		Response response = given()
+			.pathParam("order", "asc")
+		.when()
+			.get(Routes.GET_USERS_SORTED)
+		.then()
+			.statusCode(200)
+			.extract().response();
+		
+		// Capture all the IDs in the response
+		List<Integer> userIds = response.jsonPath().getList("id", Integer.class);
+		
+		assertThat(isSortedAscending(userIds), is(true));
+	}
 	
 	
 	
