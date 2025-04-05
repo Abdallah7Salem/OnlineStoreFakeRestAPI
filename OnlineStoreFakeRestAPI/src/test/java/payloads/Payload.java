@@ -1,10 +1,16 @@
 package payloads;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 import com.github.javafaker.Faker;
+
 import pojo.Product;
 import pojo.Address;
+import pojo.Cart;
+import pojo.CartProduct;
 import pojo.Geolocation;
 import pojo.User;
 import pojo.Name;
@@ -62,7 +68,17 @@ public class Payload {
 	
 	
 	// Cart Payload
-	
+	public static Cart cartPayload (int userId) {
+		List<CartProduct> products = new ArrayList<>();
+		
+		// Adding one random product to the cart
+		int productId = random.nextInt(100);
+		int quantity = random.nextInt(10) + 1;
+		
+		products.add(new CartProduct(productId, quantity));
+		
+		return (new Cart(userId, new Date(), products));
+	}
 	
 	// Login Payload
 	
