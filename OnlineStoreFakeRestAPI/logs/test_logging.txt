@@ -1,4 +1,4 @@
-Request method:	PUT
+Request method:	DELETE
 Request URI:	https://fakestoreapi.com/users/1
 Proxy:			<none>
 Request params:	<none>
@@ -6,61 +6,42 @@ Query params:	<none>
 Form params:	<none>
 Path params:	id=1
 Headers:		Accept=*/*
-				Content-Type=application/json
 Cookies:		<none>
 Multiparts:		<none>
-Body:
-{
-    "email": "zada.crist@gmail.com",
-    "username": "raisa.haley",
-    "password": "8c7yxpeq72vw",
-    "name": {
-        "firstname": "Jody",
-        "lastname": "Jacobs"
-    },
-    "address": {
-        "city": "East Freddie",
-        "street": "Cronin Manor",
-        "number": 84,
-        "zipcode": "19762",
-        "geolocation": {
-            "lat": "22.931866",
-            "lng": "-69.180820"
-        }
-    },
-    "phone": "740-346-9131"
-}
+Body:			<none>
 HTTP/1.1 200 OK
-Date: Sat, 05 Apr 2025 14:54:00 GMT
+Date: Sat, 05 Apr 2025 14:57:31 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
 Access-Control-Allow-Origin: *
-Etag: W/"127-+DIaDSYna05HPNdmpNHFsBkNSQ0"
+Etag: W/"120-HNMhv14aQeBJetA9fBvavCZ+gdk"
 X-Powered-By: Express
 Cf-Cache-Status: DYNAMIC
 Content-Encoding: gzip
 Server: cloudflare
-CF-RAY: 92b9e0d4a90094d1-MRS
+CF-RAY: 92b9e5fcbf88e169-MRS
 alt-svc: h3=":443"; ma=86400
 
 {
-    "email": "zada.crist@gmail.com",
-    "username": "raisa.haley",
-    "password": "8c7yxpeq72vw",
-    "name": {
-        "firstname": "Jody",
-        "lastname": "Jacobs"
-    },
     "address": {
-        "city": "East Freddie",
-        "street": "Cronin Manor",
-        "number": 84,
-        "zipcode": "19762",
         "geolocation": {
-            "lat": "22.931866",
-            "lng": "-69.180820"
-        }
+            "lat": "-37.3159",
+            "long": "81.1496"
+        },
+        "city": "kilcoole",
+        "street": "new road",
+        "number": 7682,
+        "zipcode": "12926-3874"
     },
-    "phone": "740-346-9131"
+    "id": 1,
+    "email": "john@gmail.com",
+    "username": "johnd",
+    "password": "m38rmF$",
+    "name": {
+        "firstname": "john",
+        "lastname": "doe"
+    },
+    "phone": "1-570-236-7033",
+    "__v": 0
 }
