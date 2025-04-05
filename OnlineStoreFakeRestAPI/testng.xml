@@ -10,9 +10,18 @@
   
   
   
-  <test thread-count="2" name="API Tests">
+  <test name="Product Tests">
   	<classes>
   		<class name = "testcases.ProductTests"/>
   	</classes>
   </test> <!-- Test -->
+  
+  <test name="User Tests">
+  	<classes>
+  		<class name = "testcases.UserTests"/>
+  	</classes>
+  </test> <!-- Test -->
+  
+  
+  
 </suite> <!-- Suite -->
