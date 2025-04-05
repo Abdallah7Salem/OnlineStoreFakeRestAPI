@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
 
-<suite name="API TestSuite">
+<suite name="API TestSuite" thread-count = "2" parallel = "tests">
   
   <listeners>
   	<listener class-name = "utils.ExtentReporter"/>
