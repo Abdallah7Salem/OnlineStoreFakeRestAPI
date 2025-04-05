@@ -54,14 +54,16 @@ public class UserTests extends BaseClass {
 	@Test
 	public void testGetUsersWithLimit()
 	{
+		int limit = configReader.getIntProperty("limit");
+		
 		given()
-			.pathParam("limit", 3)
+			.pathParam("limit", limit)
 		.when()
 			.get(Routes.GET_USERS_WITH_LIMIT)
 		.then()
 			.statusCode(200)
 			.log().body()
-			.body("size()", equalTo(3));
+			.body("size()", equalTo(limit));
 	}
 	
 	
