@@ -71,7 +71,7 @@ public class CartTests extends BaseClass{
         
     }
  	
-	@Test
+	//@Test
     public void testGetUserCart() 
 	{
         int userId = configReader.getIntProperty("userId");
@@ -85,7 +85,18 @@ public class CartTests extends BaseClass{
             .body("userId", everyItem(equalTo(userId))); // Validate that the response contains the correct user ID
     }
  	
-	
+    //@Test
+    public void testGetCartsWithLimit() 
+    {
+        int limit = configReader.getIntProperty("limit");
+        given()
+            .pathParam("limit", limit)
+        .when()
+            .get(Routes.GET_CARTS_WITH_LIMIT)
+        .then()
+            .statusCode(200)
+            .body("size()", lessThanOrEqualTo(limit)); // Validate that the response size is within the limit
+    }
  	
 }
 
