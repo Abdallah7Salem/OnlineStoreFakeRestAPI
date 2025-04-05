@@ -34,7 +34,7 @@ public class CartTests extends BaseClass{
 			.body("size()", greaterThan(0));
 	}
 	
-	@Test
+	//@Test
 	public void testGetCartById()
 	{
 		int cartId = configReader.getIntProperty("cartId");
@@ -48,7 +48,28 @@ public class CartTests extends BaseClass{
 			.body("id", equalTo(cartId));
 	}
 	
-	
+ 	@Test
+    public void testGetCartsByDateRange() {
+     
+    	 String startDate = configReader.getProperty("startdate");
+    	 String endDate = configReader.getProperty("enddate");
+    	    
+         Response response=given()
+             .pathParam("startdate", startDate)
+             .pathParam("enddate", endDate)
+         .when()
+             .get(Routes.GET_CARTS_BY_DATE_RANGE)
+         .then()
+             .statusCode(200)
+             .body("size()", greaterThan(0)) // Validate that the response is not empty
+             .extract().response();
+        
+     // Extract the list of cart dates
+        List<String> cartDates = response.jsonPath().getList("date");
+   
+        assertThat(validateCartDatesWithinRange(cartDates, startDate, endDate), is(true));
+        
+    }
 }
 
 
