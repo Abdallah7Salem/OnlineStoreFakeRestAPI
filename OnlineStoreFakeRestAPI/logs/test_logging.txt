@@ -1,47 +1,96 @@
 Request method:	GET
-Request URI:	https://fakestoreapi.com/users/1
+Request URI:	https://fakestoreapi.com/users?limit=3
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	id=1
+Path params:	limit=3
 Headers:		Accept=*/*
 Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Sat, 05 Apr 2025 14:09:52 GMT
+Date: Sat, 05 Apr 2025 14:26:30 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
-Access-Control-Allow-Origin: *
-Etag: W/"120-HNMhv14aQeBJetA9fBvavCZ+gdk"
-X-Powered-By: Express
-Cf-Cache-Status: DYNAMIC
-Content-Encoding: gzip
+access-control-allow-origin: *
+etag: W/"379-AFin0pEiizoj0p4MesFaQfsNi2U"
+x-powered-by: Express
+cf-cache-status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=WZ1hFPPtFncIqhIP6NZZfSFKYMOIeQuXZEil2VQ%2BI8PFm%2BPIhrQGgNznl9UGpaSqGldZvkweF9iLTSpq4zYZb99FQYw3NeG5CBRWX8%2Fi1NGbv0q6bhfwNXMOEKgc09ox2XVl"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 92b9a02ffcbaac0b-MRS
+CF-RAY: 92b9b8895a2732f7-MRS
+Content-Encoding: gzip
 alt-svc: h3=":443"; ma=86400
+server-timing: cfL4;desc="?proto=TCP&rtt=60940&min_rtt=44848&rtt_var=21720&sent=7&recv=7&lost=0&retrans=0&sent_bytes=3126&recv_bytes=762&delivery_rate=66957&cwnd=252&unsent_bytes=0&cid=aff2c4ae2cb18116&ts=351&x=0"
 
-{
-    "address": {
-        "geolocation": {
-            "lat": "-37.3159",
-            "long": "81.1496"
+[
+    {
+        "address": {
+            "geolocation": {
+                "lat": "-37.3159",
+                "long": "81.1496"
+            },
+            "city": "kilcoole",
+            "street": "new road",
+            "number": 7682,
+            "zipcode": "12926-3874"
         },
-        "city": "kilcoole",
-        "street": "new road",
-        "number": 7682,
-        "zipcode": "12926-3874"
+        "id": 1,
+        "email": "john@gmail.com",
+        "username": "johnd",
+        "password": "m38rmF$",
+        "name": {
+            "firstname": "john",
+            "lastname": "doe"
+        },
+        "phone": "1-570-236-7033",
+        "__v": 0
     },
-    "id": 1,
-    "email": "john@gmail.com",
-    "username": "johnd",
-    "password": "m38rmF$",
-    "name": {
-        "firstname": "john",
-        "lastname": "doe"
+    {
+        "address": {
+            "geolocation": {
+                "lat": "-37.3159",
+                "long": "81.1496"
+            },
+            "city": "kilcoole",
+            "street": "Lovers Ln",
+            "number": 7267,
+            "zipcode": "12926-3874"
+        },
+        "id": 2,
+        "email": "morrison@gmail.com",
+        "username": "mor_2314",
+        "password": "83r5^_",
+        "name": {
+            "firstname": "david",
+            "lastname": "morrison"
+        },
+        "phone": "1-570-236-7033",
+        "__v": 0
     },
-    "phone": "1-570-236-7033",
-    "__v": 0
-}
+    {
+        "address": {
+            "geolocation": {
+                "lat": "40.3467",
+                "long": "-30.1310"
+            },
+            "city": "Cullman",
+            "street": "Frances Ct",
+            "number": 86,
+            "zipcode": "29567-1452"
+        },
+        "id": 3,
+        "email": "kevin@gmail.com",
+        "username": "kevinryan",
+        "password": "kev02937@",
+        "name": {
+            "firstname": "kevin",
+            "lastname": "ryan"
+        },
+        "phone": "1-567-094-1345",
+        "__v": 0
+    }
+]
