@@ -20,7 +20,20 @@ import routes.Routes;
 
 public class UserTests extends BaseClass{
 
-	
+	// 1) Fetch all the users
+	@Test
+	public void testGetAllUsers()
+	{
+		given()
+		
+		.when()
+			.get(Routes.GET_ALL_USERS)
+		.then()
+			.statusCode(200)
+			.log().body()
+			.contentType(ContentType.JSON)
+			.body("size()", greaterThan(0)); 
+	}
 	
 	
 }
