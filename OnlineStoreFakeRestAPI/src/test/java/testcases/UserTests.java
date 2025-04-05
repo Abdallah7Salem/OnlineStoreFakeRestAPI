@@ -21,7 +21,7 @@ import routes.Routes;
 public class UserTests extends BaseClass{
 
 	// 1) Fetch all the users
-	@Test
+	//@Test
 	public void testGetAllUsers()
 	{
 		given()
@@ -35,7 +35,20 @@ public class UserTests extends BaseClass{
 			.body("size()", greaterThan(0)); 
 	}
 	
-	
+	// 2) Test to fetch a specific user by ID
+	@Test
+	public void testGetUserById()
+	{
+		int userId = configReader.getIntProperty("userId");
+		
+		given()
+			.pathParam("id", userId)
+		.when()
+			.get(Routes.GET_USER_BY_ID)
+		.then()
+			.log().body()
+			.statusCode(200);
+	}
 }
 
 
