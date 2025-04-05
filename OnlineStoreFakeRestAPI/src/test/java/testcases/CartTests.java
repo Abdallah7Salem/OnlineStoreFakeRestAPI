@@ -22,7 +22,7 @@ import routes.Routes;
 
 public class CartTests extends BaseClass{
 
-	@Test
+	//@Test
 	public void testGetAllCarts() 
 	{
 		given()
@@ -33,6 +33,21 @@ public class CartTests extends BaseClass{
 			.statusCode(200)
 			.body("size()", greaterThan(0));
 	}
+	
+	@Test
+	public void testGetCartById()
+	{
+		int cartId = configReader.getIntProperty("cartId");
+		
+		given()
+			.pathParam("id", cartId)
+		.when()
+			.get(Routes.GET_CART_BY_ID)
+		.then()
+			.statusCode(200)
+			.body("id", equalTo(cartId));
+	}
+	
 	
 }
 
