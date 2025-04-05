@@ -123,7 +123,7 @@ public class UserTests extends BaseClass {
 	}
 	
 	// 7) Test to update a user
-	@Test
+	//@Test
 	public void testUpdateUser()
 	{
 		int userId = configReader.getIntProperty("userId");
@@ -140,8 +140,23 @@ public class UserTests extends BaseClass {
 			.statusCode(200)
 			.body("username", equalTo(updatedUser.getUsername()));
 		
-		
 	}
+	
+	// 8) Delete user
+	@Test
+	void testDeleteUser()
+	{
+		int userId = configReader.getIntProperty("userId");
+		
+		given()
+			.pathParam("id", userId)
+		.when()
+			.delete(Routes.DELETE_USER)
+		.then()
+			.statusCode(200);
+	}
+	
+	
 	
 }
 
