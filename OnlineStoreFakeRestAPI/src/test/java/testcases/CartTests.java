@@ -121,7 +121,7 @@ public class CartTests extends BaseClass{
     public void testGetCartsSortedAsc()
     {
     	Response response = given()
-    		.pathParam("order", "desc")
+    		.pathParam("order", "asc")
     	.when()
     		.get(Routes.GET_CARTS_SORTED)
     	.then()
