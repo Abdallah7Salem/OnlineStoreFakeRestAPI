@@ -26,13 +26,13 @@
   	<classes>
   		<class name = "testcases.CartTests"/>
   	</classes>
-  </test>
+  </test> <!-- Test -->
   
   <test name="Login Tests">
   	<classes>
   		<class name = "testcases.LoginTests"/>
   	</classes>
-  </test>
+  </test> <!-- Test -->
   
   
 </suite> <!-- Suite -->
