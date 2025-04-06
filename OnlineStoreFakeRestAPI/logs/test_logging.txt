@@ -1,4 +1,49 @@
 Request method:	GET
+Request URI:	https://fakestoreapi.com/carts/1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=1
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 06 Apr 2025 14:06:06 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Etag: W/"a1-wvAyaNKAHffOoZd5/I4wHuNFvSs"
+X-Powered-By: Express
+Cf-Cache-Status: DYNAMIC
+Content-Encoding: gzip
+Server: cloudflare
+CF-RAY: 92c1d80b3c7cf4f6-MRS
+alt-svc: h3=":443"; ma=86400
+
+{
+    "id": 1,
+    "userId": 1,
+    "date": "2020-03-02T00:00:00.000Z",
+    "products": [
+        {
+            "productId": 1,
+            "quantity": 4
+        },
+        {
+            "productId": 2,
+            "quantity": 1
+        },
+        {
+            "productId": 3,
+            "quantity": 6
+        }
+    ],
+    "__v": 0
+}
+Request method:	GET
 Request URI:	https://fakestoreapi.com/products/1
 Proxy:			<none>
 Request params:	<none>
@@ -10,18 +55,21 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Sun, 06 Apr 2025 13:37:02 GMT
+Date: Sun, 06 Apr 2025 14:06:07 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
-Access-Control-Allow-Origin: *
-Etag: W/"16c-MMdrqY6N0sTiefLdsgtBej9eunY"
-X-Powered-By: Express
-Cf-Cache-Status: DYNAMIC
-Content-Encoding: gzip
+access-control-allow-origin: *
+etag: W/"16c-MMdrqY6N0sTiefLdsgtBej9eunY"
+x-powered-by: Express
+cf-cache-status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=D8Kh7SNYHrL%2F9XkmJw88KtGhmW1TePMM5IR877wdacntRpP2j0t%2BWBZBtjN5jQ2dVaLr0twCOZUmp2ZB6lueje3dLsndDXpthhM%2BwlNhlWlgJPMHhsZTOyjnZ5J8U83CLqv4"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 92c1ad76792be215-MRS
+CF-RAY: 92c1d8131fa2e162-MRS
+Content-Encoding: gzip
 alt-svc: h3=":443"; ma=86400
+server-timing: cfL4;desc="?proto=TCP&rtt=45269&min_rtt=44078&rtt_var=14519&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3128&recv_bytes=759&delivery_rate=84775&cwnd=227&unsent_bytes=0&cid=aaee97d502384852&ts=110&x=0"
 
 {
     "id": 1,
@@ -34,4 +82,54 @@ alt-svc: h3=":443"; ma=86400
         "rate": 3.9,
         "count": 120
     }
+}
+Request method:	GET
+Request URI:	https://fakestoreapi.com/users/1
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	id=1
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 06 Apr 2025 14:06:08 GMT
+Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+access-control-allow-origin: *
+etag: W/"120-HNMhv14aQeBJetA9fBvavCZ+gdk"
+x-powered-by: Express
+cf-cache-status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bK2vhGt4DCJPDFbXgVteWEZuRRi%2By%2BFO813gyLbw9PasrcbNsCcDoTiRHX8e8qspy%2FiegyspGyXOhIVFc47q6TZwxOndB9bzNJmO9hsq2ShrkfUu%2Bwv6frfi5x82WebWe78s"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 92c1d814aea08479-MRS
+Content-Encoding: gzip
+alt-svc: h3=":443"; ma=86400
+server-timing: cfL4;desc="?proto=TCP&rtt=48797&min_rtt=46212&rtt_var=19176&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3127&recv_bytes=756&delivery_rate=91664&cwnd=251&unsent_bytes=0&cid=7ae7f0f46f0fd4c2&ts=230&x=0"
+
+{
+    "address": {
+        "geolocation": {
+            "lat": "-37.3159",
+            "long": "81.1496"
+        },
+        "city": "kilcoole",
+        "street": "new road",
+        "number": 7682,
+        "zipcode": "12926-3874"
+    },
+    "id": 1,
+    "email": "john@gmail.com",
+    "username": "johnd",
+    "password": "m38rmF$",
+    "name": {
+        "firstname": "john",
+        "lastname": "doe"
+    },
+    "phone": "1-570-236-7033",
+    "__v": 0
 }
