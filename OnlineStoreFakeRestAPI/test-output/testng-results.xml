@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-05T20:54:02 EET" name="Default suite" finished-at="2025-04-05T20:54:08 EET" duration-ms="5729">
+  <suite started-at="2025-04-06T13:41:06 EET" name="Default suite" finished-at="2025-04-06T13:41:12 EET" duration-ms="5230">
     <groups>
     </groups>
-    <test started-at="2025-04-05T20:54:02 EET" name="Default test" finished-at="2025-04-05T20:54:08 EET" duration-ms="5729">
+    <test started-at="2025-04-06T13:41:06 EET" name="Default test" finished-at="2025-04-06T13:41:12 EET" duration-ms="5230">
       <class name="testcases.CartTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.CartTests@54e041a4]" started-at="2025-04-05T20:54:02 EET" name="setup" finished-at="2025-04-05T20:54:03 EET" duration-ms="1157" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.CartTests@9cb8225]" started-at="2025-04-06T13:41:07 EET" name="setup" finished-at="2025-04-06T13:41:07 EET" duration-ms="539" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testGetCartsByDateRange()[pri:0, instance:testcases.CartTests@54e041a4]" started-at="2025-04-05T20:54:03 EET" name="testGetCartsByDateRange" finished-at="2025-04-05T20:54:08 EET" duration-ms="4301" status="PASS">
+        <test-method signature="testCreateCart()[pri:0, instance:testcases.CartTests@9cb8225]" started-at="2025-04-06T13:41:07 EET" name="testCreateCart" finished-at="2025-04-06T13:41:12 EET" duration-ms="4511" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGetCartsByDateRange -->
+        </test-method> <!-- testCreateCart -->
       </class> <!-- testcases.CartTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
