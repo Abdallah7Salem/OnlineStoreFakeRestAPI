@@ -22,7 +22,7 @@ import routes.Routes;
 
 public class CartTests extends BaseClass{
 
-	//@Test
+	@Test
 	public void testGetAllCarts() 
 	{
 		given()
@@ -34,7 +34,7 @@ public class CartTests extends BaseClass{
 			.body("size()", greaterThan(0));
 	}
 	
-	//@Test
+	@Test
 	public void testGetCartById()
 	{
 		int cartId = configReader.getIntProperty("cartId");
@@ -48,7 +48,7 @@ public class CartTests extends BaseClass{
 			.body("id", equalTo(cartId));
 	}
 	
- 	//@Test
+ 	@Test
     public void testGetCartsByDateRange() {
      
     	 String startDate = configReader.getProperty("startdate");
@@ -71,7 +71,7 @@ public class CartTests extends BaseClass{
         
     }
  	
-	//@Test
+	@Test
     public void testGetUserCart() 
 	{
         int userId = configReader.getIntProperty("userId");
@@ -85,7 +85,7 @@ public class CartTests extends BaseClass{
             .body("userId", everyItem(equalTo(userId))); // Validate that the response contains the correct user ID
     }
  	
-    //@Test
+    @Test
     public void testGetCartsWithLimit() 
     {
         int limit = configReader.getIntProperty("limit");
@@ -98,7 +98,7 @@ public class CartTests extends BaseClass{
             .body("size()", lessThanOrEqualTo(limit)); // Validate that the response size is within the limit
     }
  	
-    //@Test
+    @Test
     public void testGetCartsSorted()
     {
     	Response response = given()
@@ -117,7 +117,7 @@ public class CartTests extends BaseClass{
     	assertThat(isSortedDescending(cartIds), is(true));
     }
     
-    //@Test
+    @Test
     public void testGetCartsSortedAsc()
     {
     	Response response = given()
@@ -136,7 +136,7 @@ public class CartTests extends BaseClass{
     	assertThat(isSortedAscending(cartIds), is(true));
     }
     
-    //@Test
+    @Test
     public void testCreateCart() 
     {
     	int userId = configReader.getIntProperty("userId");
@@ -155,7 +155,7 @@ public class CartTests extends BaseClass{
             .body("products.size()", greaterThan(0));
      }
     
-     //@Test
+     @Test
      public void testUpdateCart() 
      {
     	 int userId = configReader.getIntProperty("userId");
