@@ -22,6 +22,12 @@
   	</classes>
   </test> <!-- Test -->
   
+  <test name="Cart Tests">
+  	<classes>
+  		<class name = "testcases.CartTests"/>
+  	</classes>
+  </test>
+  
   
   
 </suite> <!-- Suite -->
