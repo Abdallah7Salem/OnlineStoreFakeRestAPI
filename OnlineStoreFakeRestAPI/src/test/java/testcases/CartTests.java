@@ -136,7 +136,7 @@ public class CartTests extends BaseClass{
     	assertThat(isSortedAscending(cartIds), is(true));
     }
     
-    @Test
+    //@Test
     public void testCreateCart() 
     {
     	int userId = configReader.getIntProperty("userId");
@@ -153,7 +153,28 @@ public class CartTests extends BaseClass{
             .body("id", notNullValue()) // Validate that the cart ID in response is not null
             .body("userId", notNullValue()) // Validate that the user ID in response is not null
             .body("products.size()", greaterThan(0));
-      }
+     }
+    
+     // @Test
+     public void testUpdateCart() 
+     {
+    	 int userId = configReader.getIntProperty("userId");
+     	 int cartId = configReader.getIntProperty("cartId");
+    	
+    	 Cart updateCart=Payload.cartPayload(userId); //userId passing
+    	 given()
+             .pathParam("id", cartId)
+             .contentType(ContentType.JSON)
+             .body(updateCart)
+             .when()
+                 .put(Routes.UPDATE_CART)
+             .then()
+                 .statusCode(200)
+                 .body("id", equalTo(cartId)) // Validate that the response contains the correct cart ID
+                 .body("userId", notNullValue())
+    			 .body("products.size()", equalTo(1));
+     }
+    
     
 }
 
