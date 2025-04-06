@@ -98,6 +98,43 @@ public class CartTests extends BaseClass{
             .body("size()", lessThanOrEqualTo(limit)); // Validate that the response size is within the limit
     }
  	
+    @Test
+    public void testGetCartsSorted()
+    {
+    	Response response = given()
+    		.pathParam("order", "desc")
+    	.when()
+    		.get(Routes.GET_CARTS_SORTED)
+    	.then()
+    		.statusCode(200)
+    		.body("size()", greaterThan(0)) // Validate that the response is not empty
+    		.extract().response();
+    	
+    	// Parse response to get product IDs
+    	List<Integer> cartIds = response.jsonPath().getList("id", Integer.class);
+    	
+    	// Validate IDs are sorted in ascending order (calling helper method)
+    	assertThat(isSortedDescending(cartIds), is(true));
+    }
+    
+    @Test
+    public void testGetCartsSortedAsc()
+    {
+    	Response response = given()
+    		.pathParam("order", "desc")
+    	.when()
+    		.get(Routes.GET_CARTS_SORTED)
+    	.then()
+    		.statusCode(200)
+    		.body("size()", greaterThan(0)) // Validate that the response is not empty
+    		.extract().response();
+    	
+    	// Parse response to get product IDs
+    	List<Integer> cartIds = response.jsonPath().getList("id", Integer.class);
+    	
+    	// Validate IDs are sorted in ascending order (calling helper method)
+    	assertThat(isSortedAscending(cartIds), is(true));
+    }
 }
 
 
