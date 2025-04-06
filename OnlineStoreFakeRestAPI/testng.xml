@@ -34,5 +34,12 @@
   	</classes>
   </test> <!-- Test -->
   
+   
+  <test name="Schema Tests">
+  	<classes>
+  		<class name = "testcases.SchemaTests"/>
+  	</classes>
+  </test> <!-- Test -->
+  
   
 </suite> <!-- Suite -->
