@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-06T14:56:50 EET" name="Default suite" finished-at="2025-04-06T14:56:54 EET" duration-ms="4098">
+  <suite started-at="2025-04-06T15:01:19 EET" name="Default suite" finished-at="2025-04-06T15:01:25 EET" duration-ms="5371">
     <groups>
     </groups>
-    <test started-at="2025-04-06T14:56:50 EET" name="Default test" finished-at="2025-04-06T14:56:54 EET" duration-ms="4098">
+    <test started-at="2025-04-06T15:01:19 EET" name="Default test" finished-at="2025-04-06T15:01:25 EET" duration-ms="5371">
       <class name="testcases.LoginTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginTests@78fa769e]" started-at="2025-04-06T14:56:50 EET" name="setup" finished-at="2025-04-06T14:56:50 EET" duration-ms="559" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginTests@16612a51]" started-at="2025-04-06T15:01:19 EET" name="setup" finished-at="2025-04-06T15:01:20 EET" duration-ms="472" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testInvalidUserLogin()[pri:0, instance:testcases.LoginTests@78fa769e]" started-at="2025-04-06T14:56:50 EET" name="testInvalidUserLogin" finished-at="2025-04-06T14:56:54 EET" duration-ms="3416" status="PASS">
+        <test-method signature="testInvalidUserLogin()[pri:0, instance:testcases.LoginTests@16612a51]" started-at="2025-04-06T15:01:20 EET" name="testInvalidUserLogin" finished-at="2025-04-06T15:01:23 EET" duration-ms="3497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidUserLogin -->
+        <test-method signature="testValidUserLogin()[pri:0, instance:testcases.LoginTests@16612a51]" started-at="2025-04-06T15:01:24 EET" name="testValidUserLogin" finished-at="2025-04-06T15:01:25 EET" duration-ms="1204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidUserLogin -->
       </class> <!-- testcases.LoginTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

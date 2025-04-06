@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Abdallah\AppData\Local\Temp\testng-eclipse--110027529\testng-customsuite.xml</span>
+                    <span>C:\Users\Abdallah\AppData\Local\Temp\testng-eclipse--1326423474\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="testcases.LoginTests" class="method navigator-link" hash-for-method="testInvalidUserLogin">testInvalidUserLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="testcases.LoginTests" class="method navigator-link" hash-for-method="testValidUserLogin">testValidUserLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -131,12 +136,19 @@
                   <span class="method-name">testInvalidUserLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidUserLogin">
+                  </a> <!-- testValidUserLogin -->
+                  <span class="method-name">testValidUserLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Abdallah\AppData\Local\Temp\testng-eclipse--110027529\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Abdallah\AppData\Local\Temp\testng-eclipse--1326423474\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -185,16 +197,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testInvalidUserLogin')
 data.setCell(0, 2, 'testcases.LoginTests')
-data.setCell(0, 3, 3416);
+data.setCell(0, 3, 3497);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testValidUserLogin')
+data.setCell(1, 2, 'testcases.LoginTests')
+data.setCell(1, 3, 1204);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -227,7 +243,11 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testInvalidUserLogin</span>
-                <span class="method-start">574 ms</span>
+                <span class="method-start">486 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testValidUserLogin</span>
+                <span class="method-start">4134 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
