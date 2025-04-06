@@ -1,10 +1,10 @@
-Request method:	POST
-Request URI:	https://fakestoreapi.com/carts
+Request method:	PUT
+Request URI:	https://fakestoreapi.com/carts/1
 Proxy:			<none>
 Request params:	<none>
 Query params:	<none>
 Form params:	<none>
-Path params:	<none>
+Path params:	id=1
 Headers:		Accept=*/*
 				Content-Type=application/json
 Cookies:		<none>
@@ -12,39 +12,39 @@ Multiparts:		<none>
 Body:
 {
     "userId": 1,
-    "date": 1743939667778,
+    "date": 1743939956684,
     "products": [
         {
-            "productId": 1,
-            "quantity": 10
+            "productId": 35,
+            "quantity": 3
         }
     ]
 }
 HTTP/1.1 200 OK
-Date: Sun, 06 Apr 2025 11:41:09 GMT
+Date: Sun, 06 Apr 2025 11:45:58 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Connection: keep-alive
 access-control-allow-origin: *
-etag: W/"54-CmfZwy5uC+mEAycv3XoVQ0e3jZY"
+etag: W/"53-0TwAHps9O4MPCdzzhdsENRvfLRc"
 x-powered-by: Express
 cf-cache-status: DYNAMIC
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=sgFwpbI0LQ6OG5LjMgT3CZpTc%2F10zSs3UgG6l0w%2FfhxN7g%2F1yK1Neo6jaJtqINr3z99QuX3KjvKZ5NEDyEkOdSaJV2wiklH8gbTBl%2BA2jvaUGw%2F3S2ZMCiWGcF%2FT4KMGeh6j"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=wRizzLppIK33YTPF650ajjeCUWPcLwlGsYKQynLt01cdsFLYJMu11HDVbFL8bR%2B%2FxU972YLgnFgPpAIHBJPXeZLj%2FmAeeRfQOme3TFcdw%2Bklub%2Fh3PGw0SUUCy3L%2FrL23pwY"}],"group":"cf-nel","max_age":604800}
 NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
 Server: cloudflare
-CF-RAY: 92c103b67db1e28d-MRS
+CF-RAY: 92c10ac19d79e219-MRS
 Content-Encoding: gzip
 alt-svc: h3=":443"; ma=86400
-server-timing: cfL4;desc="?proto=TCP&rtt=56754&min_rtt=54697&rtt_var=24627&sent=7&recv=7&lost=0&retrans=0&sent_bytes=3128&recv_bytes=883&delivery_rate=59528&cwnd=242&unsent_bytes=0&cid=fe98dd79ca1e59ca&ts=435&x=0"
+server-timing: cfL4;desc="?proto=TCP&rtt=64439&min_rtt=61251&rtt_var=29346&sent=7&recv=7&lost=0&retrans=0&sent_bytes=3127&recv_bytes=884&delivery_rate=48823&cwnd=244&unsent_bytes=0&cid=e6f57deb0b5169e2&ts=253&x=0"
 
 {
-    "id": 11,
+    "id": 1,
     "userId": 1,
-    "date": 1743939667778,
+    "date": 1743939956684,
     "products": [
         {
-            "productId": 1,
-            "quantity": 10
+            "productId": 35,
+            "quantity": 3
         }
     ]
 }
