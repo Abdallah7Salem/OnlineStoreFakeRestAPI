@@ -32,7 +32,24 @@ public class LoginTests extends BaseClass{
 			.body(equalTo("username or password is incorrect")); // Validate the message response body
 	}
 	
-	
+	@Test
+	public void testValidUserLogin()
+	{
+		String username = configReader.getProperty("username");
+		String password = configReader.getProperty("password");
+		
+		Login newLogin = new Login(username, password);
+		
+		given()
+			.contentType(ContentType.JSON)
+			.body(newLogin)
+		.when()
+			.post(Routes.AUTH_LOGIN)
+		.then()
+			.log().body()
+			.statusCode(200) 
+			.body("token", notNullValue());
+	}
 	
 }
 
