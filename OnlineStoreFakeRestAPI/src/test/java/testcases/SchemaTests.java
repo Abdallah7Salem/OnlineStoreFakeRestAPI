@@ -35,6 +35,18 @@ public class SchemaTests extends BaseClass{
        		.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("cartSchema.json"));
    }
 	
+	@Test
+	public void testUserSchema()
+	{
+		int userId=configReader.getIntProperty("userId");
+		given()
+			.pathParam("id",userId)
+		.when()
+			.get(Routes.GET_USER_BY_ID)
+		.then()
+			.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("userSchema.json"));
+		
+	}
 	
 }
 
