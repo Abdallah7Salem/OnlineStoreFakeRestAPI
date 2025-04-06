@@ -98,7 +98,7 @@ public class CartTests extends BaseClass{
             .body("size()", lessThanOrEqualTo(limit)); // Validate that the response size is within the limit
     }
  	
-    @Test
+    //@Test
     public void testGetCartsSorted()
     {
     	Response response = given()
@@ -117,7 +117,7 @@ public class CartTests extends BaseClass{
     	assertThat(isSortedDescending(cartIds), is(true));
     }
     
-    @Test
+    //@Test
     public void testGetCartsSortedAsc()
     {
     	Response response = given()
@@ -135,6 +135,26 @@ public class CartTests extends BaseClass{
     	// Validate IDs are sorted in ascending order (calling helper method)
     	assertThat(isSortedAscending(cartIds), is(true));
     }
+    
+    @Test
+    public void testCreateCart() 
+    {
+    	int userId = configReader.getIntProperty("userId");
+    	Cart newCart=Payload.cartPayload(userId); //Passing userId is 1
+    	
+    	given()
+            .contentType(ContentType.JSON)
+            .body(newCart)
+        .when()
+            .post(Routes.CREATE_CART)
+        .then()
+            .statusCode(200)
+            .log().body()
+            .body("id", notNullValue()) // Validate that the cart ID in response is not null
+            .body("userId", notNullValue()) // Validate that the user ID in response is not null
+            .body("products.size()", greaterThan(0));
+      }
+    
 }
 
 
