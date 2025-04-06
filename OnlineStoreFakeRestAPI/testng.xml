@@ -28,6 +28,11 @@
   	</classes>
   </test>
   
+  <test name="Login Tests">
+  	<classes>
+  		<class name = "testcases.LoginTests"/>
+  	</classes>
+  </test>
   
   
 </suite> <!-- Suite -->
