@@ -155,7 +155,7 @@ public class CartTests extends BaseClass{
             .body("products.size()", greaterThan(0));
      }
     
-     // @Test
+     //@Test
      public void testUpdateCart() 
      {
     	 int userId = configReader.getIntProperty("userId");
@@ -166,15 +166,26 @@ public class CartTests extends BaseClass{
              .pathParam("id", cartId)
              .contentType(ContentType.JSON)
              .body(updateCart)
-             .when()
-                 .put(Routes.UPDATE_CART)
-             .then()
-                 .statusCode(200)
-                 .body("id", equalTo(cartId)) // Validate that the response contains the correct cart ID
-                 .body("userId", notNullValue())
-    			 .body("products.size()", equalTo(1));
+         .when()
+             .put(Routes.UPDATE_CART)
+         .then()
+             .statusCode(200)
+             .body("id", equalTo(cartId)) // Validate that the response contains the correct cart ID
+             .body("userId", notNullValue())
+             .body("products.size()", equalTo(1));
      }
     
+	 @Test
+	 public void testDeleteCart() 
+	 {
+	     int cartId = configReader.getIntProperty("cartId");
+	     given()
+	         .pathParam("id", cartId)
+	     .when()
+	         .delete(Routes.DELETE_CART)
+	     .then()
+	         .statusCode(200); // Validate that the response status code is 204 (No Content)
+	    }   
     
 }
 
