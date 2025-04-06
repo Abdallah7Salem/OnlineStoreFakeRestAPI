@@ -24,6 +24,30 @@ public class SchemaTests extends BaseClass{
 			.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("productSchema.json"));
 	}
 	
+	@Test
+	 public void testCartSchema() {
+   	int cartId = configReader.getIntProperty("cartId");
+       given()
+           .pathParam("id", cartId)
+       .when()
+           .get(Routes.GET_CART_BY_ID)
+       .then()
+       		.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("cartSchema.json"));
+   }
 	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
